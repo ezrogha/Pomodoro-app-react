@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react';
 import usePomodoroTimer from '../custom hooks/pomodoroCounter';
+import PropTypes from 'prop-types'
 
 export default function Pomodoro (props){
-	const time = usePomodoroTimer(props)
+	const [time, pomodoroCount, pomodoroStatus] = usePomodoroTimer(props)
 	useEffect(() => {
 		document.title = currentTime()
 	})
@@ -13,6 +14,8 @@ export default function Pomodoro (props){
 	function currentTime(){
 		return `${addZero(time.minutes)}:${addZero(time.seconds)}`
 	}
+	props.currentPomodoroCount(pomodoroCount)
+	props.currentPomodoroStatus(pomodoroStatus)
 	return (
 		<div>
 			<span>{currentTime()}</span>
@@ -20,5 +23,9 @@ export default function Pomodoro (props){
 	)
 }
 
+Pomodoro.propTypes = {
+	currentPomodoroCount: PropTypes.number,
+	currentPomodoroStatus: PropTypes.number
+}
 
 
