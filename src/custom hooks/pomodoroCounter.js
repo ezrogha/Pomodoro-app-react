@@ -1,12 +1,13 @@
 import { useState, useEffect } from 'react';
+import { notify } from '../components/helpers';
 
-export default function usePomodoroTimer({ pomoState, pomodoro_duration = 25, short_break_duration = 5, long_break_duration = 15, handleStartAgain }){
-	const [state, setState] = useState('pomodoro')
-	const [pomodoroCount, setPomodoroCount] = useState(1)
-	const [totalSeconds, setTotalSeconds] = useState(pomodoro_duration*60)
-	const [minutes, setMinutes] = useState(pomodoro_duration)
-	const [seconds, setSeconds] = useState(0)
-	const [pauseTime, setPauseTime] = useState(0)
+export default function usePomodoroTimer({ pomoState, pomodoro_duration, short_break_duration, long_break_duration, handleStartAgain }){
+	const [state, setState] = useState('pomodoro');
+	const [pomodoroCount, setPomodoroCount] = useState(1);
+	const [totalSeconds, setTotalSeconds] = useState(pomodoro_duration*60);
+	const [minutes, setMinutes] = useState(pomodoro_duration);
+	const [seconds, setSeconds] = useState(0);
+	const [pauseTime, setPauseTime] = useState(0);
 
 	useEffect(() => {
 		const interval = setInterval(() => {
@@ -14,22 +15,20 @@ export default function usePomodoroTimer({ pomoState, pomodoro_duration = 25, sh
 				console.log([totalSeconds, state, pomodoroCount])
 				if (totalSeconds === 0 && state === 'pomodoro') {
 					setPomodoroCount(pomodoroCount + 1)
-					console.log('Pomo End')
-					console.log('pomodoroCount:', pomodoroCount)
 					setMinutes(0)
 					setSeconds(0)
 					clearInterval(interval);
 					if (pomodoroCount % 4 === 0 && pomodoroCount !== 0) {
-						console.log('pomodoroCount:', pomodoroCount)
-						console.log('In long break, don\'t know why')
+            notify('break');
 						setState('long_break')
 						setTotalSeconds(long_break_duration * 60)
 					} else {
-						console.log('In short break, where it should be')
+            notify('break');
 						setState('short_break')
 						setTotalSeconds(short_break_duration * 60)
 					}
 				} else if ((state === 'short_break' || state === 'long_break') && totalSeconds === 0) {
+          notify('work');
 					setState('pomodoro')
 					setTotalSeconds(pomodoro_duration*60)
 					setMinutes(pomodoro_duration)
@@ -43,7 +42,6 @@ export default function usePomodoroTimer({ pomoState, pomodoro_duration = 25, sh
 					setTotalSeconds(totalSeconds - 1)
 				}
 			} else if (pomoState === 'stop') {
-				console.log('Stop')
 				handleStartAgain()
 				setTotalSeconds(pomodoro_duration * 60)
 				setMinutes(pomodoro_duration)
@@ -59,8 +57,8 @@ export default function usePomodoroTimer({ pomoState, pomodoro_duration = 25, sh
 		return () => clearInterval(interval)
 	})
 
-	return {
+	return [{
 		minutes,
 		seconds
-	}
+	}, pomodoroCount, state]
 }
