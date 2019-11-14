@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "dee799a3d7e45ab76d1267a73738ee66",
+    "revision": "8f5fb7e7cf23c0af7995f9677bf87773",
     "url": "/Pomodoro-app-react/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Pomodoro-app-react/static/css/2.b713a164.chunk.css"
   },
   {
-    "revision": "7e5cc1bcb2a55832202e",
+    "revision": "b13fc3442c876060c849",
     "url": "/Pomodoro-app-react/static/css/main.50ae6cda.chunk.css"
   },
   {
@@ -16,16 +16,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Pomodoro-app-react/static/js/2.0bc2dcf8.chunk.js"
   },
   {
-    "revision": "7e5cc1bcb2a55832202e",
-    "url": "/Pomodoro-app-react/static/js/main.23974a23.chunk.js"
+    "revision": "b13fc3442c876060c849",
+    "url": "/Pomodoro-app-react/static/js/main.d3946a7c.chunk.js"
   },
   {
     "revision": "025ee1a70d7675208fb9",
     "url": "/Pomodoro-app-react/static/js/runtime-main.b0877ffe.js"
   },
   {
-    "revision": "e9acea510652fd2dd866a8bf817e13bf",
-    "url": "/Pomodoro-app-react/static/media/aron-visuals-BXOXnQ26B7o-unsplash.e9acea51.jpg"
+    "revision": "d30639002e79e40aa2b04bbfa96607a5",
+    "url": "/Pomodoro-app-react/static/media/aron.d3063900.jpg"
   },
   {
     "revision": "13db00b7a34fee4d819ab7f9838cc428",
