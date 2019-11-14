@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/Pomodoro-app-react/static/css/main.50ae6cda.chunk.css",
+    "main.js": "/Pomodoro-app-react/static/js/main.23974a23.chunk.js",
+    "main.js.map": "/Pomodoro-app-react/static/js/main.23974a23.chunk.js.map",
+    "runtime-main.js": "/Pomodoro-app-react/static/js/runtime-main.b0877ffe.js",
+    "runtime-main.js.map": "/Pomodoro-app-react/static/js/runtime-main.b0877ffe.js.map",
+    "static/css/2.b713a164.chunk.css": "/Pomodoro-app-react/static/css/2.b713a164.chunk.css",
+    "static/js/2.0bc2dcf8.chunk.js": "/Pomodoro-app-react/static/js/2.0bc2dcf8.chunk.js",
+    "static/js/2.0bc2dcf8.chunk.js.map": "/Pomodoro-app-react/static/js/2.0bc2dcf8.chunk.js.map",
+    "index.html": "/Pomodoro-app-react/index.html",
+    "precache-manifest.70acfe723b3b34b31a41b18f91849ec8.js": "/Pomodoro-app-react/precache-manifest.70acfe723b3b34b31a41b18f91849ec8.js",
+    "service-worker.js": "/Pomodoro-app-react/service-worker.js",
+    "static/css/2.b713a164.chunk.css.map": "/Pomodoro-app-react/static/css/2.b713a164.chunk.css.map",
+    "static/css/main.50ae6cda.chunk.css.map": "/Pomodoro-app-react/static/css/main.50ae6cda.chunk.css.map",
+    "static/media/aron-visuals-BXOXnQ26B7o-unsplash.jpg": "/Pomodoro-app-react/static/media/aron-visuals-BXOXnQ26B7o-unsplash.e9acea51.jpg",
+    "static/media/semantic.min.css": "/Pomodoro-app-react/static/media/outline-icons.ef60a4f6.woff",
+    "static/media/bus-horn.mp3": "/Pomodoro-app-react/static/media/bus-horn.6e4413c4.mp3",
+    "static/media/favicon.ico": "/Pomodoro-app-react/static/media/favicon.33d46e7c.ico"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b0877ffe.js",
+    "static/css/2.b713a164.chunk.css",
+    "static/js/2.0bc2dcf8.chunk.js",
+    "static/css/main.50ae6cda.chunk.css",
+    "static/js/main.23974a23.chunk.js"
+  ]
+}
