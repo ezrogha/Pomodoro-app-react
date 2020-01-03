@@ -9,6 +9,3 @@
 - [React Semantic UI](https://react.semantic-ui.com/)
 - [Styled-Components](https://www.styled-components.com/)
 - [react-loader-spinner](https://www.npmjs.com/package/react-loader-spinner)
-
-#### Inspired By
-[genesis-algorithms/react-pomodoro](https://github.com/genesis-algorithms/react-pomodoro)
